@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Scopri la città di Tunisi, capitale della Tunisia, la sua storia, cultura, tradizioni culinarie e i suoi luoghi iconici.">
+    <title>Scopri Tunisi</title>
+
+    <!-- Include Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts - Oswald for Titles and Roboto for body text -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Modifica il font globale */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: #34495e;
+        }
+
+        .navbar-brand {
+            font-family: 'Oswald', sans-serif;
+            font-weight: bold;
+            font-size: 1.6rem;
+        }
+
+        .navbar-nav .nav-link {
+            font-size: 1.1rem;
+            font-family: 'Roboto', sans-serif;
+            transition: color 0.3s;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #1abc9c;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-image: url('https://difotoediviaggi.it/images/foto-articoli/tunisi-sidi-bou-said/tunisi-sidi-bou-said-entrata.webp');
+            background-size: cover;
+            background-position: center;
+            height: 500px;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            filter: brightness(0.8);
+        }
+
+        .hero h1 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 600;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+        }
+
+        .hero p {
+            font-family: 'Roboto', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 300;
+        }
+
+        /* Section Titles */
+        .section-title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 2rem;
+            font-weight: 600;
+            color: #34495e;
+            margin-bottom: 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 3px;
+            background-color: #1abc9c;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* Card and Image Section */
+        .card-img-top {
+            border-radius: 8px;
+            object-fit: cover; /* Assicura che l'immagine non venga deformata */
+            height: 250px;
+        }
+
+        .card-body {
+            background-color: #ecf0f1;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .card-title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #34495e;
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .footer a {
+            color: #1abc9c;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Galleria di Immagini */
+        .image-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .image-gallery img {
+            width: 100%;
+            max-width: 350px; /* Limita la larghezza delle immagini */
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .image-gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        .image-description {
+            text-align: center;
+            font-family: 'Roboto', sans-serif;
+            font-size: 1rem;
+            margin-top: 10px;
+            color: #34495e;
+        }
+
+        /* Media Queries per migliorare la responsività */
+        @media (max-width: 768px) {
+            .image-gallery img {
+                max-width: 100%;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Tunisi</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#intro">Introduzione</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#gallery">Galleria</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#storia">Storia</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#cultura">Cultura</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#economia">Economia</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#cibo">Tradizioni e Cibo</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div>
+            <h1>This is Tunisi</h1>
+            
+        </div>
+    </section>
+
+    <!-- Introduzione Section -->
+    <div class="container py-5" id="intro">
+        <h2 class="section-title">Benvenuti a Tunisi</h2>
+        <p>
+            Tunisi è la capitale della Tunisia, una delle città più importanti del Nord Africa, con una lunga storia che
+            risale all'antichità. Situata lungo la costa mediterranea, si estende vicino al Golfo di Tunisi e al Lago di
+            Tunisi, il che ha favorito il suo sviluppo come centro di scambi commerciali e culturali nel corso dei secoli.
+        </p>
+    </div>
+
+    <!-- Storia Section -->
+    <div class="container py-5" id="storia">
+        <h2 class="section-title">Storia di Tunisi</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <p>
+                    La storia di Tunisi è influenzata da diverse civiltà. Fondata dai Fenici, divenne un insediamento cartaginese e
+                    successivamente cadde sotto il dominio romano dopo la distruzione di Cartagine nel 146 a.C. Più tardi, con l'arrivo
+                    degli arabi nel VII secolo, Tunisi divenne un centro importante per il commercio e la cultura islamica, trasformandosi
+                    in una città ricca di moschee, scuole religiose e mercati. Durante il periodo coloniale, Tunisi fu sotto il dominio
+                    francese fino all'indipendenza nel 1956.
+                </p>
+              
+            </div>
+            <div class="col-md-6">
+                <img src="rovine.png" class="img-fluid rounded" alt="Colonia Francesca">
+            </div>
+        </div>
+    </div>
+
+    <!-- Cultura Section -->
+    <div class="container py-5" id="cultura">
+        <h2 class="section-title">Cultura di Tunisi</h2>
+        <p>
+            La cultura di Tunisi è un affascinante mix di tradizioni arabe, berbere, francesi e moderne influenze occidentali. La città
+            ospita numerosi musei, gallerie d'arte, teatri e siti storici, che riflettono la sua ricca storia culturale. Un esempio iconico
+            è la Medina di Tunisi, con le sue strette viuzze, mercati e moschee storiche, che rappresenta il cuore pulsante della città.
+        </p>
+        <div class="row">
+            <div class="col-md-6">
+                <img src="teatro.jpg" class="img-fluid rounded" alt="Teatro di Tunisi">
+                <p class="mt-2 text-center">Il Teatro di Tunisi, centro culturale e sede di spettacoli teatrali e concerti.</p>
+            </div>
+            <div class="col-md-6">
+                <img src="medina.jpg" class="img-fluid rounded" alt="Medina di Tunisi">
+                <p class="mt-2 text-center">La Medina di Tunisi, Patrimonio dell'Umanità UNESCO, è il cuore della città.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Economia Section -->
+    <div class="container py-5" id="economia">
+        <h2 class="section-title">Economia di Tunisi</h2>
+        <p>
+            Tunisi è la capitale economica della Tunisia e un importante centro commerciale del Nord Africa. L'economia della città si basa
+            principalmente su settori come il turismo, il commercio, l'industria tessile, il petrolio e il gas naturale. Il porto di Tunisi è
+            uno dei più importanti del paese, facilitando il commercio internazionale. Inoltre, la città è sede di numerose banche, 
+            compagnie assicurative e istituzioni finanziarie.
+        </p>
+        <div class="row">
+            <div class="col-md-6">
+                <img src="porto.jpg" class="img-fluid rounded" alt="Porto di Tunisi">
+                <p class="mt-2 text-center">Il Porto di Tunisi, un nodo commerciale fondamentale per il paese.</p>
+            </div>
+            <div class="col-md-6">
+                <img src="tessile.jpg" class="img-fluid rounded" alt="Industria Tessile">
+                <p class="mt-2 text-center">L'industria tessile è uno dei settori chiave nell'economia della città.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tradizioni e Cibo Section -->
+    <div class="container py-5" id="cibo">
+        <h2 class="section-title">Tradizioni e Cibo di Tunisi</h2>
+        <p>
+            La cucina di Tunisi è ricca di sapori intensi e piatti che riflettono una fusione di tradizioni arabe, berbere, francesi
+            e italiane. Gli ingredienti principali includono couscous, olio d'oliva, spezie e frutti di mare freschi. Ecco alcuni piatti
+            tipici che non puoi perdere quando visiti Tunisi:
+        </p>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="couscous.jpg" class="card-img-top" alt="Couscous">
+                    <div class="card-body">
+                        <h5 class="card-title">Couscous</h5>
+                        <p class="card-text">Il couscous è il piatto nazionale della Tunisia. È preparato con semola di grano e condito con
+                            carne, verdure e spezie aromatiche come il cumino e il coriandolo.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="brik.png" class="card-img-top" alt="Brik">
+                    <div class="card-body">
+                        <h5 class="card-title">Brik</h5>
+                        <p class="card-text">Il brik è uno snack tradizionale a base di pasta sfoglia ripiena di uovo, tonno, prezzemolo e
+                            capperi, fritto fino a diventare croccante.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="hrissa.png" class="card-img-top" alt="Harissa">
+                    <div class="card-body">
+                        <h5 class="card-title">Harissa</h5>
+                        <p class="card-text">L'harissa è una pasta piccante a base di peperoncini, aglio, spezie e olio d'oliva. È utilizzata
+                            come condimento per piatti di carne e couscous.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Galleria di Immagini -->
+    <div class="container py-5" id="gallery">
+        <h2 class="section-title">Galleria di Tunisi</h2>
+        <div class="image-gallery">
+            <div>
+                <img src="medina.jpg" alt="Medina di Tunisi">
+                <div class="image-description">La Medina di Tunisi - Patrimonio dell'UNESCO</div>
+            </div>
+            <div>
+                <img src="vista2.jpg" alt="Vista di Tunisi">
+                <div class="image-description">Vista panoramica della città di Tunisi</div>
+            </div>
+            <div>
+                <img src="MuseoBardo.png" alt="Museo del Bardo">
+                <div class="image-description">Museo del Bardo - Conosciuto per i mosaici romani</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>Scopri di più su Tunisi. Visita la città e immergiti nella sua storia, cultura e cucina unica!</p>
+        <a href="#">Contattaci</a>
+    </div>
+
+    <!-- Include Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
