@@ -1,176 +1,182 @@
 <!DOCTYPE html>
 <html lang="it">
-
+    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Scopri la città di Tunisi, capitale della Tunisia, la sua storia, cultura, tradizioni culinarie e i suoi luoghi iconici.">
-    <title>Scopri Tunisi</title>
+    <meta name="description" content="Discover the city of Tunis, the capital of Tunisia, its history, culture, culinary traditions, and iconic landmarks.">
+    <title>Discover Tunis</title>
 
-    <!-- Include Bootstrap CSS -->
+    <!-- Include Bootstrap CSS for responsive design and pre-built components -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome for icons -->
+    <!-- Font Awesome for adding icons (used in navbar and elsewhere) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- Google Fonts - Oswald for Titles and Roboto for body text -->
+    <!-- Google Fonts: Oswald for Titles and Roboto for body text -->
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     
     <style>
-        /* Modifica il font globale */
+        /* Global font styling and background color */
         body {
             font-family: 'Roboto', sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
+            background-color: #f4f4f4; /* Light gray background for the whole page */
+            color: #333; /* Dark gray text color */
         }
 
-        /* Navbar */
+        /* Navbar styling */
         .navbar {
-            background-color: #34495e;
+            background-color: #34495e; /* Dark blue-grey background for navbar */
         }
 
         .navbar-brand {
-            font-family: 'Oswald', sans-serif;
+            font-family: 'Oswald', sans-serif; /* Title font */
             font-weight: bold;
-            font-size: 1.6rem;
+            font-size: 1.6rem; /* Large text size for the brand name */
         }
 
         .navbar-nav .nav-link {
-            font-size: 1.1rem;
-            font-family: 'Roboto', sans-serif;
-            transition: color 0.3s;
+            font-size: 1.1rem; /* Navigation links size */
+            font-family: 'Roboto', sans-serif; /* Body font */
+            transition: color 0.3s; /* Smooth transition when hovering */
         }
 
+        /* Hover effect for navigation links */
         .navbar-nav .nav-link:hover {
-            color: #1abc9c;
+            color: #1abc9c; /* Color change to green when hovered */
         }
 
-        /* Hero Section */
+        /* Hero Section Styling (background image and text overlay) */
         .hero {
-            background-image: url('https://difotoediviaggi.it/images/foto-articoli/tunisi-sidi-bou-said/tunisi-sidi-bou-said-entrata.webp');
-            background-size: cover;
-            background-position: center;
-            height: 500px;
-            color: #ffffff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            filter: brightness(0.8);
+            background-image: url('https://difotoediviaggi.it/images/foto-articoli/tunisi-sidi-bou-said/tunisi-sidi-bou-said-entrata.webp'); /* Background image */
+            background-size: cover; /* Cover the entire section */
+            background-position: center; /* Center the image */
+            height: 500px; /* Fixed height */
+            color: #ffffff; /* White text color */
+            display: flex; /* Flexbox layout */
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            text-align: center; /* Center text */
+            filter: brightness(0.8); /* Darken the background slightly */
         }
 
         .hero h1 {
-            font-family: 'Oswald', sans-serif;
-            font-size: 3.5rem;
-            font-weight: 600;
-            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+            font-family: 'Oswald', sans-serif; /* Title font */
+            font-size: 3.5rem; /* Large font size for the title */
+            font-weight: 600; /* Semi-bold font weight */
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8); /* Shadow for better visibility */
         }
 
         .hero p {
-            font-family: 'Roboto', sans-serif;
-            font-size: 1.5rem;
-            font-weight: 300;
+            font-family: 'Roboto', sans-serif; /* Body font */
+            font-size: 1.5rem; /* Medium font size for the description */
+            font-weight: 300; /* Light font weight */
         }
 
-        /* Section Titles */
+        /* Section Titles Styling */
         .section-title {
-            font-family: 'Oswald', sans-serif;
-            font-size: 2rem;
-            font-weight: 600;
-            color: #34495e;
-            margin-bottom: 20px;
-            text-align: center;
-            position: relative;
+            font-family: 'Oswald', sans-serif; /* Title font */
+            font-size: 2rem; /* Large font size for section titles */
+            font-weight: 600; /* Semi-bold font weight */
+            color: #34495e; /* Dark blue-grey color for titles */
+            margin-bottom: 20px; /* Margin below the title */
+            text-align: center; /* Center the title */
+            position: relative; /* To position the underline */
         }
 
+        /* Custom underline effect for section titles */
         .section-title::after {
-            content: '';
+            content: ''; /* No text, just a line */
             position: absolute;
             width: 100px;
-            height: 3px;
-            background-color: #1abc9c;
+            height: 3px; /* Thin line */
+            background-color: #1abc9c; /* Green color for underline */
             bottom: -10px;
             left: 50%;
-            transform: translateX(-50%);
+            transform: translateX(-50%); /* Center the line horizontally */
         }
 
-        /* Card and Image Section */
+        /* Card Image Styling */
         .card-img-top {
-            border-radius: 8px;
-            object-fit: cover; /* Assicura che l'immagine non venga deformata */
-            height: 250px;
+            border-radius: 8px; /* Rounded corners for images */
+            object-fit: cover; /* Ensure image fits inside the container without distortion */
+            height: 250px; /* Fixed height for images */
         }
 
+        /* Card Body Styling */
         .card-body {
-            background-color: #ecf0f1;
-            padding: 20px;
-            border-radius: 8px;
+            background-color: #ecf0f1; /* Light grey background */
+            padding: 20px; /* Padding around the content */
+            border-radius: 8px; /* Rounded corners */
         }
 
         .card-title {
-            font-family: 'Oswald', sans-serif;
-            font-size: 1.3rem;
-            font-weight: bold;
+            font-family: 'Oswald', sans-serif; /* Title font */
+            font-size: 1.3rem; /* Medium font size for card titles */
+            font-weight: bold; /* Bold title */
         }
 
-        /* Footer */
+        /* Footer Styling */
         .footer {
-            background-color: #34495e;
-            color: white;
-            padding: 30px 0;
-            text-align: center;
-            margin-top: 50px;
+            background-color: #34495e; /* Dark blue-grey footer background */
+            color: white; /* White text in footer */
+            padding: 30px 0; /* Vertical padding */
+            text-align: center; /* Center the text */
+            margin-top: 50px; /* Add space above the footer */
         }
 
+        /* Footer links styling */
         .footer a {
-            color: #1abc9c;
-            text-decoration: none;
-            font-weight: bold;
+            color: #1abc9c; /* Green link color */
+            text-decoration: none; /* Remove underline */
+            font-weight: bold; /* Bold links */
         }
 
         .footer a:hover {
-            text-decoration: underline;
+            text-decoration: underline; /* Underline on hover */
         }
 
-        /* Galleria di Immagini */
+        /* Image Gallery Styling */
         .image-gallery {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            justify-content: center;
+            display: flex; /* Flexbox layout for images */
+            flex-wrap: wrap; /* Allow images to wrap to the next line */
+            gap: 15px; /* Space between images */
+            justify-content: center; /* Center images horizontally */
         }
 
         .image-gallery img {
-            width: 100%;
-            max-width: 350px; /* Limita la larghezza delle immagini */
-            height: auto;
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
+            width: 100%; /* Make images responsive */
+            max-width: 350px; /* Limit the maximum width */
+            height: auto; /* Keep aspect ratio */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Add shadow effect */
+            transition: transform 0.3s ease; /* Smooth scale effect */
         }
 
+        /* Image hover effect to enlarge */
         .image-gallery img:hover {
-            transform: scale(1.05);
+            transform: scale(1.05); /* Enlarge image slightly */
         }
 
+        /* Image Description Styling */
         .image-description {
-            text-align: center;
-            font-family: 'Roboto', sans-serif;
-            font-size: 1rem;
-            margin-top: 10px;
-            color: #34495e;
+            text-align: center; /* Center the description text */
+            font-family: 'Roboto', sans-serif; /* Body font */
+            font-size: 1rem; /* Normal font size */
+            margin-top: 10px; /* Space above the description */
+            color: #34495e; /* Dark text color */
         }
 
-        /* Media Queries per migliorare la responsività */
+        /* Media Queries for responsiveness on smaller screens */
         @media (max-width: 768px) {
             .image-gallery img {
-                max-width: 100%;
+                max-width: 100%; /* Images should take full width on smaller screens */
             }
 
             .hero h1 {
-                font-size: 2.5rem;
+                font-size: 2.5rem; /* Smaller font size for hero title on small screens */
             }
 
             .hero p {
-                font-size: 1.2rem;
+                font-size: 1.2rem; /* Smaller font size for hero paragraph */
             }
         }
     </style>
@@ -178,48 +184,48 @@
 
 <body>
 
-    <!-- Navbar -->
+    <!-- Navbar Section -->
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
-            <a class="navbar-brand" href="#">Tunisi</a>
+            <a class="navbar-brand" href="#">Tunisi</a> <!-- Brand name of the website -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span> <!-- Icon for mobile navigation toggle -->
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#intro">Introduzione</a>
+                        <a class="nav-link active" href="#intro">Introduzione</a> <!-- Link to Introduction section -->
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#gallery">Galleria</a>
+                        <a class="nav-link" href="#gallery">Galleria</a> <!-- Link to Gallery section -->
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#storia">Storia</a>
+                        <a class="nav-link" href="#storia">Storia</a> <!-- Link to History section -->
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#cultura">Cultura</a>
+                        <a class="nav-link" href="#cultura">Cultura</a> <!-- Link to Culture section -->
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#economia">Economia</a>
+                        <a class="nav-link" href="#economia">Economia</a> <!-- Link to Economy section -->
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#cibo">Tradizioni e Cibo</a>
+                        <a class="nav-link" href="#cibo">Tradizioni e Cibo</a> <!-- Link to Traditions and Food section -->
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero Section with background image and text overlay -->
     <section class="hero">
         <div>
             <h1>This is Tunisi</h1>
-            
+            <!-- Hero heading for the main title of the page -->
         </div>
     </section>
 
-    <!-- Introduzione Section -->
+    <!-- Introduction Section -->
     <div class="container py-5" id="intro">
         <h2 class="section-title">Benvenuti a Tunisi</h2>
         <p>
@@ -229,7 +235,7 @@
         </p>
     </div>
 
-    <!-- Storia Section -->
+    <!-- History Section -->
     <div class="container py-5" id="storia">
         <h2 class="section-title">Storia di Tunisi</h2>
         <div class="row">
@@ -241,7 +247,6 @@
                     in una città ricca di moschee, scuole religiose e mercati. Durante il periodo coloniale, Tunisi fu sotto il dominio
                     francese fino all'indipendenza nel 1956.
                 </p>
-              
             </div>
             <div class="col-md-6">
                 <img src="rovine.png" class="img-fluid rounded" alt="Colonia Francesca">
@@ -249,7 +254,7 @@
         </div>
     </div>
 
-    <!-- Cultura Section -->
+    <!-- Culture Section -->
     <div class="container py-5" id="cultura">
         <h2 class="section-title">Cultura di Tunisi</h2>
         <p>
@@ -269,7 +274,7 @@
         </div>
     </div>
 
-    <!-- Economia Section -->
+    <!-- Economy Section -->
     <div class="container py-5" id="economia">
         <h2 class="section-title">Economia di Tunisi</h2>
         <p>
@@ -290,7 +295,7 @@
         </div>
     </div>
 
-    <!-- Tradizioni e Cibo Section -->
+    <!-- Food and Traditions Section -->
     <div class="container py-5" id="cibo">
         <h2 class="section-title">Tradizioni e Cibo di Tunisi</h2>
         <p>
@@ -332,7 +337,7 @@
         </div>
     </div>
 
-    <!-- Galleria di Immagini -->
+    <!-- Image Gallery Section -->
     <div class="container py-5" id="gallery">
         <h2 class="section-title">Galleria di Tunisi</h2>
         <div class="image-gallery">
@@ -351,15 +356,17 @@
         </div>
     </div>
 
-    <!-- Footer -->
+    <!-- Footer Section -->
     <div class="footer">
         <p>Scopri di più su Tunisi. Visita la città e immergiti nella sua storia, cultura e cucina unica!</p>
         <a href="#">Contattaci</a>
     </div>
 
-    <!-- Include Bootstrap JS and Popper.js -->
+    <!-- Include Bootstrap JS and Popper.js for interactivity -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
 </body>
 
 </html>
+
+
